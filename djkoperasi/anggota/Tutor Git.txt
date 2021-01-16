@@ -1,0 +1,25 @@
+
+membuat percabangan
+
+$ git branch produk_layout
+
+melihat cabang
+$ git branch
+
+masuk ke cabang
+$ git checkout produk_layout
+
+melihat status
+$ git status
+
+add file untuk di commit
+$ git add *
+
+commit dengan comment
+$ git commit -m "membuat cabang template produk"
+
+kirim ke server
+user:astikaputra@gmail.com
+pass:as1qazxsW@
+
+$ git pull
