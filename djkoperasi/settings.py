@@ -25,7 +25,7 @@ SECRET_KEY = '^&5(gq&dcp=3!-1t=k$m!e%0eib0psk7!&egy39l&2rry9ss-g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','192.168.1.7']
 
 
 # Application definition
@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     #'bootstrap4',
 
     'djkoperasi.masterdata',
-    #'djkoperasi.anggota',
-]
+    'djkoperasi.menu',
+   #0 .'djkoperasi.accounts',
+] 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,11 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
 
-# default static files settings for PythonAnywhere.
-# see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = '/home/gambux/djkoperasi/media'
-MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/gambux/djkoperasi/static'
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
