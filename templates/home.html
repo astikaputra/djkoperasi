@@ -1,5 +1,8 @@
 {% extends "base.html"%}
 
+{% load static %}
+
+
 {% block head_title %} {% endblock%}
 
 {% block content %}
@@ -23,8 +26,16 @@
 {% endif %}
 
 <p> ini HOME view</p>
-
+<center>
+    <div class="span2 menu">
+      <a href="" class="to_modal">
+      <img class="wobble-horizontal" src="{% static 'icon/pinjaman.png' %}" alt="" style="max-width:50%;" />
+        <p><b>PINJAMAN</b></p>
+      </a>
+    </div>	     
+</center>
 {% endblock %}
+
 
 
 
