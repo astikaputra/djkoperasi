@@ -6,6 +6,8 @@ from django.urls import path, re_path
 #from django.contrib.auth import views as auth_views
 #from accounts import views
 from django.contrib.auth.views import LoginView
+#from .vie import pinjaman
+from .views import *
 
 from .views import (
     home,
@@ -30,4 +32,7 @@ urlpatterns = [
 
     # url account
    #path('', include('accounts.urls'))
+    # URL Pinjaman & tabungan
+   path('pinjaman/', pinjaman.views.index(), name='pinjaman'),
+  # path('tabungan/', include('tabungan.urls'), name='tabungan'),
 ]

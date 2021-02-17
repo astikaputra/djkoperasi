@@ -6,27 +6,16 @@
 {% block head_title %} {% endblock%}
 
 {% block content %}
-
-<h1> {{ title }} </h1>
-
-{{ request.user }}
-
-{{ request.path }}
-
-{{ user }}
-
-{{ user.is_authenticated }}
-{% if user.is_authenticated %}
-
-<h1> User Only data </h1>
-    {% for a in my_list %}
-
-    {% endfor %}
-
-{% endif %}
-
-<p> ini HOME view</p>
 <center>
+<h1>Selamat Datang {{ request.user }}</h1>
+
+<div class="span2 menu">
+  <a href="" class="to_modal">
+  <img class="wobble-horizontal" src="{% static 'icon/tabungan.png' %}" alt="" style="max-width:50%;" />
+    <p><b>TABUNGAN</b></p>
+  </a>
+</div>	    
+
     <div class="span2 menu">
       <a href="" class="to_modal">
       <img class="wobble-horizontal" src="{% static 'icon/pinjaman.png' %}" alt="" style="max-width:50%;" />

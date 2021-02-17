@@ -13,7 +13,7 @@ def home(request):
     return render(request, "home.html", context )
 
 def about(request):
-    return render(request, "home.html", {"title":"about"})
+    return render(request, "about.html", {"title":"about"})
 
 def contact(request):
-    return render(request, "home.html", {"title":"contact"})
+    return render(request, "contact.html", {"title":"contact"})

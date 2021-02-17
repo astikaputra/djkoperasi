@@ -9,3 +9,23 @@
         {% endif %}
     </ul>
 </div>
+
+<h1> {{ title }} </h1>
+
+{{ request.user }}
+
+{{ request.path }}
+
+{{ user }}
+
+{{ user.is_authenticated }}
+{% if user.is_authenticated %}
+
+<h1> User Only data </h1>
+    {% for a in my_list %}
+
+    {% endfor %}
+
+{% endif %}
+
+<p> ini HOME view</p>
