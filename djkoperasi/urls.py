@@ -1,13 +1,14 @@
 
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 #from django.views.generic import TemplateView
 #from accounts import views as account_views
 #from django.contrib.auth import views as auth_views
 #from accounts import views
 from django.contrib.auth.views import LoginView
 #from .vie import pinjaman
-from .views import *
+from pinjaman.views import pinjaman
+from tabungan.views import tabungan
 
 from .views import (
     home,
@@ -33,6 +34,6 @@ urlpatterns = [
     # url account
    #path('', include('accounts.urls'))
     # URL Pinjaman & tabungan
-   path('pinjaman/', pinjaman.views.index(), name='pinjaman'),
-  # path('tabungan/', include('tabungan.urls'), name='tabungan'),
+    path('pinjaman/', pinjaman),
+    path('tabungan/', tabungan),
 ]

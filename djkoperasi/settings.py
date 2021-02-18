@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'djkoperasi.menu',
    #'djkoperasi.accounts',
     'pinjaman',
-    #'tabungan',
+    'tabungan',
 ] 
 
 MIDDLEWARE = [
